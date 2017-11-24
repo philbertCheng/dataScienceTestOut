@@ -100,7 +100,11 @@ def tryHistogram():
     ######second argument is number of bins#####
     #ec is the verticle edge set to black
     plt.hist(np.random.randn(1000),30,ec='black')
+    # save image to a file
+    plt.savefig('tryy.png')
+
     plt.show()
+
 
 def tryErrorBars():
     x = np.linspace(0,2*np.pi,10)
@@ -110,4 +114,8 @@ def tryErrorBars():
     #error could be an array like here (individual corresponding error for each point)
     #could also be single value for all the points
     plt.errorbar(x,y,yerr,xerr)
+    #no blank space, occupy whole plot with data
+    plt.axis('tight')
     plt.show()
+
+tryHistogram()
