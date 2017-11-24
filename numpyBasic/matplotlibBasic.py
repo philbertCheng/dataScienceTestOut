@@ -1,7 +1,9 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-def tryPlot():
+#look at matplotlib gallery for more other functionality
+
+def tryPlotAndScatter():
     #create from 0 to 2pi 50 elements
     x = np.linspace(0,2*np.pi,50)
     #plot elements of array in argument as y
@@ -85,4 +87,27 @@ def tryLegendAndLabels():
 
     plt.show()
 
-tryLegendAndLabels()
+def tryHistogram():
+    #plot histogram
+    x = [1,1,1,2,2,3,4,5,5,5,5]
+    ##### take array of data and plot histogram
+    ##### default 10 bins (bins are number of intervals in data)
+    plt.hist(x)
+
+    plt.figure()
+    #randn generate random numbers from normal distribution
+    #we generate 1000 of those
+    ######second argument is number of bins#####
+    #ec is the verticle edge set to black
+    plt.hist(np.random.randn(1000),30,ec='black')
+    plt.show()
+
+def tryErrorBars():
+    x = np.linspace(0,2*np.pi,10)
+    y = np.sin(x)
+    yerr = np.random.rand(10)
+    xerr = np.random.rand(10)/3
+    #error could be an array like here (individual corresponding error for each point)
+    #could also be single value for all the points
+    plt.errorbar(x,y,yerr,xerr)
+    plt.show()
