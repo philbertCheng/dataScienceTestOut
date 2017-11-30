@@ -91,21 +91,22 @@ def MinusTwoTuple(npArray,str):
     result = np.array(array) - npArray
     return result
 
-tuple1 = np.array([sy.Rational('0'),sy.Rational('-1/3'),sy.Rational('0')])
-tuple2 = np.array([sy.Rational('1/3'),sy.Rational('1/3')])
-#piv = ['0','0','-1/4','0','-1/8','1','0','3/4','0','0','5/8','0','0','1/4']
-#varRow = ['0' ,'0' ,'-5/4' ,'0' ,'-1/8' ,'0' ,'0' ,'3/4' ,'1' ,'0', '13/8', '0', '0' , '1/4']
+def simplexRowOperation():
+    tuple1 = np.array([sy.Rational('0'),sy.Rational('-1/3'),sy.Rational('0')])
+    tuple2 = np.array([sy.Rational('1/3'),sy.Rational('1/3')])
+    #piv = ['0','0','-1/4','0','-1/8','1','0','3/4','0','0','5/8','0','0','1/4']
+    #varRow = ['0' ,'0' ,'-5/4' ,'0' ,'-1/8' ,'0' ,'0' ,'3/4' ,'1' ,'0', '13/8', '0', '0' , '1/4']
 
-piv = ['0','4/5','1','0','1/10','0','0','-3/5','0','0','-13/10','0','0','3/5']
-varRow = ['0' ,'1' ,'0' ,'0' ,'0' ,'0' ,'0' ,'0' ,'1' ,'0', '0', '0', '0' , '1']
-#pivotRow = multTuple(piv,sy.Rational('8/5'))
-pivotRow = multTuple(piv,sy.Rational('5/4'))
-print(pivotRow)
+    piv = ['0','4/5','1','0','1/10','0','0','-3/5','0','0','-13/10','0','0','3/5']
+    varRow = ['0' ,'1' ,'0' ,'0' ,'0' ,'0' ,'0' ,'0' ,'1' ,'0', '0', '0', '0' , '1']
+    #pivotRow = multTuple(piv,sy.Rational('8/5'))
+    pivotRow = multTuple(piv,sy.Rational('5/4'))
+    print(pivotRow)
 
-#calRow = pivotRow * sy.Rational('-13/8')
-calRow = pivotRow * sy.Rational('-1')
-print(calRow)
-print('\n\n')
-print(AddTwoTuple(calRow, multTuple(varRow,1)))
+    #calRow = pivotRow * sy.Rational('-13/8')
+    calRow = pivotRow * sy.Rational('-1')
+    print(calRow)
+    print('\n\n')
+    print(AddTwoTuple(calRow, multTuple(varRow,1)))
 
 #youtube numpy beginner tutorial 1:24:08
