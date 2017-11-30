@@ -118,4 +118,25 @@ def tryErrorBars():
     plt.axis('tight')
     plt.show()
 
-tryHistogram()
+class A():
+    list = []
+    var = 0
+
+def tryClassA():
+    a = A()
+    b = A()
+    # here a and b is appending on the same list they share
+    # because we didnt assign any new list to the list value so a.list and b.list is sane
+    a.list.append(1)
+    a.var+=1
+    b.list.append(2)
+    print(a.list)
+    print(b.list)
+    print(a.var)
+    print(b.var)
+    #this does not change all list becus it assign new list to a
+    a.list = [3,4]
+    print(a.list)
+    print(b.list)
+
+tryClassA()
