@@ -109,4 +109,18 @@ def simplexRowOperation():
     print('\n\n')
     print(AddTwoTuple(calRow, multTuple(varRow,1)))
 
-#youtube numpy beginner tutorial 1:24:08
+def tryReshape():
+    r = np.arange(1,20,2)
+    r = r.reshape(5,2)
+    print(r)
+    r = r.reshape(2,5)
+    print(r)
+    print(r[-1][-2])
+    #numpy array trick to get multi dimension array element
+    print(r[-1,-1])
+    #get the first array and slice it
+    print(r[0,1:])
+    #everytime you index you drop a dimention
+    #when you slice you keep the dimention
+
+#continue incomplete indexing 2:04:00 after dimensions explained
