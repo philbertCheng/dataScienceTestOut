@@ -123,4 +123,32 @@ def tryReshape():
     #everytime you index you drop a dimention
     #when you slice you keep the dimention
 
+def dropFirstLast(grades):
+    first,*middle,last = grades
+    print(first)
+    print(middle)
+    print(last)
+
+def tryVariableArguments(*args):
+    print(args)
+    for i in args:
+        print(i)
+
+
+def tryNPArraySliceByReference():
+    a = np.array([1,2,3,4,5])
+    #assign copy only
+    b = a[-2:].copy()
+    #assign part of reference of a to c
+    #if we change elements of c it will affect a
+    c = a[-2:]
+
+    print(a)
+    print(b)
+    print(c)
+    c[0] = 100
+    print(a)
+    print(b)
+    print(c)
+
 #continue incomplete indexing 2:04:00 after dimensions explained
