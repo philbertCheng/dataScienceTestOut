@@ -151,4 +151,52 @@ def tryNPArraySliceByReference():
     print(b)
     print(c)
 
-#continue incomplete indexing 2:04:00 after dimensions explained
+def tryMask():
+    ar = np.array([1,2,3,4,5,6,7,8,9,10])
+    mask2 = ar % 3 == 0
+    print(mask2)
+    y = ar[mask2]
+    print(y)
+    x = ar.reshape(2,5)
+    print(x)
+    print(np.where(x%3 ==0))
+
+def tryNumpymethod():
+    a = np.array([[5,2,3,4,5,6],[1,2,4,5,6,7]])
+
+    print(a.min())
+    #index of min
+    print(a.argmin())
+    #position of min with taking into account dimension of array
+    print(np.unravel_index(a.argmin(),a.shape))
+    #other operations
+    print(a.prod())
+    print(a.sum())
+    print(a)
+    # operations on each column
+    print(a.sum(axis=0))
+    #operations on each row
+    print(a.sum(axis=1))
+    #whcih ever axis = the dimension with go away
+
+class A():
+    def __init__(self,number):
+        print("A")
+        print(number)
+class B():
+    def __init__(self,number):
+        print("B")
+        print(number)
+
+class C(A,B):
+    def __init__(self,number):
+        B.__init__(self,number)
+        print("C")
+        print(number)
+
+
+def tryKwargs(**kwargs):
+    print(kwargs)
+
+
+
